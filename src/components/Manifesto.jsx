@@ -1,6 +1,4 @@
 import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 import slideOne from '../assets/slide_one.jpg';
 import slideTwo from '../assets/slide_two.jpg';
@@ -21,7 +19,7 @@ const items = [
 const Manifesto = () => {
   return (
     <div id="manifesto" className="place-items-center">
-       <AliceCarousel mouseTracking items={items} itemsInSlide={2}/>
+      
     </div>
   );
 }

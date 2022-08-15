@@ -3,6 +3,7 @@ import React from 'react';
 export default function Hero() {
     return (
         <div id="hero">
+            <section className="mt-1">
             <div className="container max-w-lg px-4 py-28 mx-auto mt-px text-left md:max-w-none md:text-center">
                 
                 <h1 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl xl:text-7xl"><span class="block">Democratizing Investment</span> <span class="relative inline-block mt-3 text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-indigo-500">Allocation</span></h1>
@@ -17,6 +18,8 @@ export default function Hero() {
                 </div>
             </div>
 
+            </section>
+            
         </div>
     );
 }

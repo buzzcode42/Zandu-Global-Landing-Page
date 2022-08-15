@@ -8,9 +8,9 @@ const Navbar = () => {
     }
 
     return (
-        <div className="position: sticky">
-            <nav className="relative z-50 h-24 select-none position:fixed" x-data="{ showMenu: false }">
-                <div className="relative flex flex-wrap items-center justify-between w-full h-24 mx-auto font-medium md:justify-center">
+        <header className="fixed-nav navbar">
+            <nav className="relative z-50 h-24 select-none bg-white" x-data="{ showMenu: false }">
+                <div className="fixed flex flex-wrap items-center justify-between w-full h-24 mx-auto font-medium md:justify-center">
 
                     <div class="flex items-center justify-start w-1/4 h-full pr-4">
                         <a href="#_" className="inline-block py-4 md:py-0">
@@ -18,22 +18,31 @@ const Navbar = () => {
                         </a>
                     </div>
 
-                    <div className="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex">
+                    <div className="fixed top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-10 md:relative md:flex">
                         <div className="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
                             <a href="#_" className="items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">tails<span class="text-indigo-600">.</span></a>
-                            <div className="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
+                            <ul className="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-4 md:w-2/3 md:mt-0 md:flex-row md:items-center">
+                                    
+                                    <li>
+                                        <a href="/"><Link onClick={handleClose} activeClass="active" to="hero" offset={-100} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Home</Link></a>
+                                    </li>
 
-                                <a href="/Hero"><Link onClick={handleClose} activeClass="active" to="hero" spy={true} smooth={true} offset={0} duration="500" className="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</Link></a>
+                                    <li>
+                                        <a href="/Manifesto"><Link onClick={handleClose} activeClass="active" to="manifesto" offset={-10} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Manifesto</Link></a>
+                                    </li>
 
-                                <a href="/Manifesto"><Link onClick={handleClose} activeClass="active" to="manifesto" spy={true} smooth={true} offset={90} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Manifesto</Link></a>
+                                    <li>
+                                        <a href="/Values"><Link onClick={handleClose} activeClass="active" to="values" offset={0} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Values</Link></a>
+                                    </li>
 
-                                <a href="/Values"><Link onClick={handleClose} activeClass="active" to="values" spy={true} smooth={true} offset={30} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Our Values</Link></a>
+                                    <li>
+                                        <a href="/About"><Link onClick={handleClose} activeClass="active" to="about" offset={-10} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">About</Link></a>
+                                    </li>
 
-                                <a href="/About"><Link onClick={handleClose} activeClass="active" to="about" spy={true} smooth={true} offset={90} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">About</Link></a>
-
-                                <a href="/FAQ"><Link onClick={handleClose} activeClass="active" to="faq" spy={true} smooth={true} offset={90} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">FAQ</Link></a>
-
-                            </div>
+                                    <li>
+                                        <a href="/Faq"><Link onClick={handleClose} activeClass="active" to="faq" offset={-100} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">FAQ</Link></a>
+                                    </li>
+                                </ul>
                             <div className="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
                                 <a href="www.zanduglobal.com" className="w-full pxinline-flex items-center px-6 py-3 text-sm font-medium leading-4 text-white bg-indigo-600 md:px-3 md:w-auto md:rounded-full lg:px-5 hover:bg-indigo-500 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-indigo-600">Sign Up for Early Access</a>
                             </div>
@@ -45,7 +54,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-        </div>
+        </header>
     )
 }
 
