@@ -1,61 +1,109 @@
-import React, { useState } from 'react'
-import { Link } from 'react-scroll';
+import { useState } from "react";
 
-const Navbar = () => {
-    const [nav, setNav] = useState(false)
-    const handleClose = () => {
-        setNav(!nav)
-    }
+import { NavLink } from './Link';
+
+import menuItems from '../constant/header.data'
+
+const NavBar = () => {
+    const [navbar, setNavbar] = useState(false);
 
     return (
         <header className="fixed-nav navbar">
-            <nav className="relative z-50 h-24 select-none bg-white" x-data="{ showMenu: false }">
-                <div className="fixed flex flex-wrap items-center justify-between w-full h-24 mx-auto font-medium md:justify-center">
-
-                    <div class="flex items-center justify-start w-1/4 h-full pr-4">
-                        <a href="#_" className="inline-block py-4 md:py-0">
-                            <span className="p-1 text-xl font-black leading-none text-gray-900">Zandu Global.</span>
+        <nav className="w-full bg-white-500">
+            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+                <div>
+                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                        <a href="/">
+                            <h2 className="text-2xl font-bold text-dark">ZanduGlobal</h2>
                         </a>
-                    </div>
-
-                    <div className="fixed top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-10 md:relative md:flex">
-                        <div className="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
-                            <a href="#_" className="items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">tails<span class="text-indigo-600">.</span></a>
-                            <ul className="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-4 md:w-2/3 md:mt-0 md:flex-row md:items-center">
-                                    
-                                    <li>
-                                        <a href="/"><Link onClick={handleClose} activeClass="active" to="hero" offset={-100} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Home</Link></a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/Manifesto"><Link onClick={handleClose} activeClass="active" to="manifesto" offset={-10} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Manifesto</Link></a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/Values"><Link onClick={handleClose} activeClass="active" to="values" offset={0} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">Values</Link></a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/About"><Link onClick={handleClose} activeClass="active" to="about" offset={-10} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">About</Link></a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/Faq"><Link onClick={handleClose} activeClass="active" to="faq" offset={-100} spy={true} smooth={true} duration="500" className="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center">FAQ</Link></a>
-                                    </li>
-                                </ul>
-                            <div className="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
-                                <a href="www.zanduglobal.com" className="w-full pxinline-flex items-center px-6 py-3 text-sm font-medium leading-4 text-white bg-indigo-600 md:px-3 md:w-auto md:rounded-full lg:px-5 hover:bg-indigo-500 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-indigo-600">Sign Up for Early Access</a>
-                            </div>
+                        <div className="md:hidden">
+                            <button
+                                className="p-2 text-dark-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                                onClick={() => setNavbar(!navbar)}
+                            >
+                                {navbar ? (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 text-black"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                ) : (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 text-black"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4 6h16M4 12h16M4 18h16"
+                                        />
+                                    </svg>
+                                )}
+                            </button>
                         </div>
                     </div>
-                    <div className="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
-                        <svg className="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak=""><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                        <svg className="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" x-cloak=""><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </div>
+                <div>
+                    <div
+                        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                            navbar ? "block" : "hidden"
+                        }`}
+                    >
+                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0" sx={styles.navList}>
+                            {menuItems.map(({ path, label }, i) => (
+                                <li className="text-dark-500 hover:text-indigo-500" key={i}>
+                                    <NavLink path={path} label={label} />
+                                </li>
+                            ))}
+                        </ul>
+
+                        <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+                    <a
+                        href="https://google.com"
+                        className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                    >
+                        Sign Up for Early Access
+                    </a>
+                </div>
                     </div>
                 </div>
-            </nav>
+                <div className="hidden space-x-2 md:inline-block">
+                    <a
+                        href="https://google.com"
+                        className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                    >
+                        Sign Up for Early Access
+                    </a>
+                </div>
+            </div>
+        </nav>
         </header>
     )
 }
 
-export default Navbar
+export default NavBar
+
+const styles = {
+    navList: {
+        '.nav-item': {
+            cursor: 'pointer',
+            fontWeight: 400,
+            padding: 0,
+            margin: [null, null, null, null, '0 20px']
+        },
+        '.active': {
+            color: '#FF2156'
+        }
+    }
+}
