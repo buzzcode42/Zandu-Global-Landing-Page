@@ -21,7 +21,7 @@ function App() {
       <Footer/>
     </section>
 
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,14 +1,18 @@
-import React from 'react';
+import { Slide } from './Slide'
 
-import Slide from './Slide'
-import slideImages from './Slide/mock'
-
-const Manifesto = () => {
+export function Manifesto () {
   return (
-    <section className='slide-wrapper' id="manifesto">
-        <Slide images={slideImages} infiniteLoop={false} />
+    <section id="manifesto">
+      <div className="flex flex-wrap -mx-4">
+        <div className="w-full px-4">
+          <div className="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
+            <h2 className="mb-4text-xl font-bold md:text-3xl text-black">
+              Our Manifesto
+            </h2>
+          </div>
+        </div>
+      </div>
+      <Slide />
     </section>
   )
 }
-
-export default Manifesto

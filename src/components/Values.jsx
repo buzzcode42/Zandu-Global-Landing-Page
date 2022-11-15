@@ -7,10 +7,10 @@ export function Values() {
                     <section className="pt-120 lg:pt-[30px] pb-12 lg:pb-[30px] justify-center">
                         <div className="container">
 
-                            <div className="flex flex-wrap -mx-4">
+                            <div className="flex flex-wrap -mx-4 mt-16">
                                 <div className="w-full px-4">
                                     <div className="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
-                                        <h2 className="mb-4text-xl font-bold md:text-3xl text-white">
+                                        <h2 className="mb-4text-xl font-bold md:text-3xl text-black">
                                             Our Values
                                         </h2>
                                     </div>

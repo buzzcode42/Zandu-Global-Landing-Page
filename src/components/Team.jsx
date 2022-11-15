@@ -4,12 +4,18 @@ import santosAvatar from '../assets/santos.jpg'
 
 export function Team() {
     return (
-        <div id="about">
+        <div id="team">
             {/* Section 1 */}
             <section className="w-full py-12 bg-white lg:py-24">
                 <div className="max-w-6xl px-12 mx-auto text-center">
-                    <div className="space-y-12 md:text-center">
-                        
+                    <div className="flex flex-wrap -mx-4">
+                        <div className="w-full px-4">
+                            <div className="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
+                            <h2 className="mb-4text-xl font-bold md:text-3xl text-black">
+                                Our Team
+                            </h2>
+                            </div>
+                        </div>
                     </div>
                     <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
                         <div className="w-full border border-gray-200 rounded-lg shadow-sm">

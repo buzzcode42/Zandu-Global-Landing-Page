@@ -37,10 +37,6 @@
   }
 }
 
-.slide-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 72rem;
+.slide-h {
+  height: 120rem;
 }
