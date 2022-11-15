@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function Values() {
+export function Values() {
     return (
         <div className="grid place-items-center" id="values">
             <>
@@ -132,5 +130,5 @@ export default function Values() {
 
             </>
         </div>
-    );
+    )
 }

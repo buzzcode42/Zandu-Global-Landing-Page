@@ -1,9 +1,8 @@
-import React from 'react';
-import allanAvatar from '../assets/allan.jpg';
-import manuelAvatar from '../assets/manuel.jpg';
-import santosAvatar from '../assets/santos.jpg';
+import allanAvatar from '../assets/allan.jpg'
+import manuelAvatar from '../assets/manuel.jpg'
+import santosAvatar from '../assets/santos.jpg'
 
-export default function About() {
+export function Team() {
     return (
         <div id="about">
             {/* Section 1 */}
@@ -105,5 +104,5 @@ export default function About() {
             </section>
 
         </div>
-    );
+    )
 }

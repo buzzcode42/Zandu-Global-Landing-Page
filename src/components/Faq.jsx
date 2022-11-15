@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function Faq() {
+export function Faq() {
     return (
         <div id="faq">
             <section className="py-24 bg-white mt-10">
@@ -62,5 +60,5 @@ export default function Faq() {
             </section>
 
         </div>
-    );
+    )
 }

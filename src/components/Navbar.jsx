@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState } from "react"
 
-import { NavLink } from './Link';
+import { NavLink } from './Link'
 
 import menuItems from '../constant/header.data'
 
-const NavBar = () => {
-    const [navbar, setNavbar] = useState(false);
+import logo from '../assets/logo.png'
+
+export function NavBar() {
+    const [navbar, setNavbar] = useState(false)
 
     return (
         <header className="fixed-nav navbar">
@@ -14,7 +16,7 @@ const NavBar = () => {
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="/">
-                            <h2 className="text-2xl font-bold text-dark">ZanduGlobal</h2>
+                            <img className="w-40" src={logo} alt="ZanduGlobal" />
                         </a>
                         <div className="md:hidden">
                             <button
@@ -91,8 +93,6 @@ const NavBar = () => {
         </header>
     )
 }
-
-export default NavBar
 
 const styles = {
     navList: {
